@@ -1,0 +1,174 @@
+:root {
+    --puma-red: #ff3300; 
+    --puma-black: #111111;
+    --puma-white: #ffffff;
+    --bg-light: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--puma-black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--puma-black);
+    color: var(--puma-white);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+header a {
+    color: var(--puma-white);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header a:hover {
+    color: var(--puma-red);
+}
+
+.main-wrapper {
+    display: flex;
+    flex-grow: 1; 
+}
+
+aside {
+    width: 250px; 
+    background-color: var(--puma-black);
+    padding: 20px 0;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0; 
+    height: calc(100vh - 55px); 
+    overflow-y: auto; 
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li a {
+    display: block;
+    color: var(--bg-light);
+    text-decoration: none;
+    padding: 15px 25px;
+    border-left: 5px solid transparent;
+    transition: background-color 0.2s, border-left-color 0.2s;
+}
+
+.menu li a:hover {
+    background-color: #222;
+    border-left-color: var(--puma-red);
+}
+
+.menu li a.aktif {
+    background-color: #333;
+    color: var(--puma-white);
+    border-left-color: var(--puma-red);
+    font-weight: bold;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.page-content {
+    width: 100%; 
+}
+
+.hero-section {
+    background-color: var(--puma-black);
+    color: var(--puma-white);
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--puma-red);
+}
+
+.btn-puma {
+    display: inline-block;
+    background-color: var(--puma-red);
+    color: var(--puma-white);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-puma:hover {
+    background-color: #cc2a00; 
+    transform: translateY(-2px);
+    color: var(--puma-white); 
+}
+
+.table th {
+    background-color: var(--puma-black) !important;
+    color: var(--puma-white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.card-login, .card-form {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: var(--puma-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.form-control, .form-select {
+    border-radius: 6px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    font-family: 'Inter', sans-serif;
+}
+
+footer {
+    background-color: var(--puma-white);
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+.feature-img {
+    width: 120%; 
+    height: 190px;
+    object-fit: cover; 
+    display: block; 
+    margin-top: 10px;
+}
+
